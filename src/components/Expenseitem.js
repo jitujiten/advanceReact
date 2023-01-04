@@ -5,6 +5,7 @@ function Expenseitem(props) {
   return (
     <div className="expense-item">
       <div>{props.date.toLocaleDateString()}</div>
+      <div>{props.location}</div>
       <div className="expense-item_description">
         <h2>{props.title}</h2>
       </div>
