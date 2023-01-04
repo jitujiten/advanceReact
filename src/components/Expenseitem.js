@@ -1,15 +1,13 @@
 import "./Expenseitem.css";
-
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
 function Expenseitem(props) {
+ 
 
   return (
     <div className="expense-item">
-      <div>{props.date.toLocaleDateString()}</div>
-      <div>{props.location}</div>
-      <div className="expense-item_description">
-        <h2>{props.title}</h2>
-      </div>
-      <div className="expense-item__price">${props.amount}</div>
+      <ExpenseDate date={props.date}/>
+      <ExpenseDetails  amount={props.amount} />
     </div>
   );
 }

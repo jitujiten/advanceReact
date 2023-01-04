@@ -26,6 +26,7 @@
     flex: 1;
     margin: 0 1rem;
     color: white;
+    margin-top: 10px;
   }
   
   .expense-item__price {
@@ -36,6 +37,12 @@
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
+  }
+ 
+  .expense_details{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
   }
   
   @media (min-width: 580px) {
