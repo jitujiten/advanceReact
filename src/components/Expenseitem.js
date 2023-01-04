@@ -1,19 +1,14 @@
 import "./Expenseitem.css";
 
-function Expenseitem() {
-const expensedate=new Date().toLocaleDateString()
-const LocationOfExpenditure="mumbai"
-const expensetitle="car insurance";
-const expenseamount=294.54;
+function Expenseitem(props) {
 
   return (
     <div className="expense-item">
-      <div>{expensedate}</div>
-      <h2>{LocationOfExpenditure}</h2>
+      <div>{props.date.toLocaleDateString()}</div>
       <div className="expense-item_description">
-        <h2>{expensetitle}</h2>
+        <h2>{props.title}</h2>
       </div>
-      <div className="expense-item__price">${expenseamount}</div>
+      <div className="expense-item__price">${props.amount}</div>
     </div>
   );
 }
