@@ -1,12 +1,11 @@
-
+import React, { useState } from 'react';
 import "./Expenseitem.css"
-import Expense from "./Expenses";
 const ExpenseDetails=(props)=> {
+  const [amount,setTitle]=useState(props.amount);
 
-  const deleteHandler=(e)=>{
-    e.preventDefault();
-    
-    console.log(props.id);
+  const addHandler=()=>{
+    setTitle(100)
+    console.log(amount);
   }
 
     return (
@@ -14,8 +13,8 @@ const ExpenseDetails=(props)=> {
       <div className="expense-item_description">
         <h2>{props.title}</h2>
       </div>
-      <div className="expense-item__price">${props.amount}</div>
-      <button  className="btn" onClick={deleteHandler}>Delete</button>
+      <div className="expense-item__price">${amount}</div>
+      <button  className="btn" onClick={addHandler}>add amount</button>
     </div>
   );
 }
