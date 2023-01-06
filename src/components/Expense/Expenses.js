@@ -40,6 +40,7 @@ const Expense=()=>{
              date= {expense.date}
              amount= {expense.amount}
              location={expense.location}
+             id={expense.id}
             />
           ))}
         </div> 

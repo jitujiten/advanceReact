@@ -8,7 +8,7 @@ const Expenseitem=(props)=> {
     <div className="expense-item">
       <ExpenseDate date={props.date}/>
       <div>{props.location}</div>
-      <ExpenseDetails title={props.title} amount={props.amount} />
+      <ExpenseDetails title={props.title} id={props.id} amount={props.amount} />
     </div>
   );
   

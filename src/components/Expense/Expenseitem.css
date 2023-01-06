@@ -45,6 +45,14 @@
     gap: 20px;
   }
   
+.btn{
+  border-radius: 10px;
+  font-size: 15px;
+}
+.btn:hover{
+  background-color: #e316d2;
+}
+
   @media (min-width: 580px) {
     .expense-item__description {
       flex-direction: row;
