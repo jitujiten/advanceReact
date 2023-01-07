@@ -8,20 +8,56 @@ const [titleentervalue,titlechangevalue]=useState("");
 const [amountentervalue,amountchangevalue]=useState("");
 const [dateentervalue,datechangevalue]=useState("");
 
+// const [userInput,setuserInput]=useState({
+//     titleentervalue:"",
+//     amountentervalue:"",
+//     dateentervalue:""
+// });
+
   const titlechangeHandler = (event) => {
-    titlechangevalue(event.target.value);
+     titlechangevalue(event.target.value);
+
+    // setuserInput({
+    //     ...userInput,
+    //     titlechangevalue:event.target.value 
+    // })
+
+    // setuserInput((prvState)=>{
+    //  return {...prvState, titlechangevalue:event.target.value } ;
+    // })
   };
 
   const amountchangeHandler = (event) => {
     amountchangevalue(event.target.value);
+
+    // setuserInput({
+    //     ...userInput,
+    //     amountchangevalue:event.target.value  
+    // }); 
   };
 
   const datechangeHandler = (event) => {
     datechangevalue(event.target.value);
+
+    // setuserInput({
+    //     ...userInput,
+    //     datechangevalue:event.target.value
+    // });
   };
 
+  const submiting=(event)=>{
+    event.preventDefault(); 
+   const alldata= {
+        title:titleentervalue,
+        amount:amountentervalue,
+        date:new Date(dateentervalue)
+    };  
+    console.log(alldata);
+  }
+
+
   return (
-    <form>
+    <form onSubmit={submiting}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
