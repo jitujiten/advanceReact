@@ -1,0 +1,27 @@
+.expenses_div{
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);  
+        background-color: #4b4b4b;  
+        margin: 2rem auto;
+        max-width: 95%;
+        width: 50rem;
+}
+.expenses_inside_div{
+    display: flex;
+    flex-direction: row;
+    gap: 450px;
+}
+label{
+    color:white;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+select{
+  height:40px; 
+  width:170px; 
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+}
