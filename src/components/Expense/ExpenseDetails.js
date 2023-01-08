@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./Expenseitem.css"
 const ExpenseDetails=(props)=> {
   
+
     return (
     <div className="expense_details">
       <div className="expense-item_description">
