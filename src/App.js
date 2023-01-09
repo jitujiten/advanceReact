@@ -4,7 +4,7 @@ import Card from "./components/ui/Card";
 import "./components/Expense/Expenses.css"
 import Expense from './components/Expense/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
-import ExpenseFilter from './components/Expense/ExpensesFilter';
+
 
 const dummy_expenses = [
   {
@@ -47,18 +47,11 @@ const App=()=> {
     })
   }
   
-  const [filteredyear,setExpensefilter]=useState("2022");
-
-  const filterchangeHandler=(selectedyear)=>{
-    setExpensefilter(selectedyear);
-  }
-  
 
   return (
     <div>
      <NewExpense ongettingdata={getingdatafromnew}/>
       <Card className="expenses">
-      <ExpenseFilter selected={filteredyear} onchangefilter={filterchangeHandler}/>
       <Expense item={expensedata}/>
       </Card>
     </div>
