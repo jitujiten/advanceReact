@@ -39,18 +39,18 @@ const dummy_expenses = [
 
 const App=()=> {
   
-  const[Expenses,setExpense]=useState(dummy_expenses);
+ const [expensedata,setexpense]=useState(dummy_expenses);
 
   const  getingdatafromnew=(expens)=>{
-    setExpense((prvdata)=>{
-      return [expens,...prvdata]
-    });
+    setexpense(()=>{
+      return [expens,...expensedata];
+    })
   }
   
-  const [filteredyear,setExpensefilter]=useState("2020");
+  const [filteredyear,setExpensefilter]=useState("2022");
 
   const filterchangeHandler=(selectedyear)=>{
-    setExpensefilter(selectedyear)
+    setExpensefilter(selectedyear);
   }
   
 
@@ -59,7 +59,7 @@ const App=()=> {
      <NewExpense ongettingdata={getingdatafromnew}/>
       <Card className="expenses">
       <ExpenseFilter selected={filteredyear} onchangefilter={filterchangeHandler}/>
-      <Expense item={Expenses}/>
+      <Expense item={expensedata}/>
       </Card>
     </div>
   );

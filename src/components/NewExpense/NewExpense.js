@@ -1,6 +1,7 @@
 import ExpenseForm from "./Expenseform";
 import "./NewExpense.css"
 const NewExpense=(props)=>{
+    
 const saveExpenseHandler=(Enteredexpensedata)=>{
   const alldatafromexpen={
     ...Enteredexpensedata,

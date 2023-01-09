@@ -12,7 +12,7 @@ const Expense=(props)=>{
              date= {expense.date}
              amount= {expense.amount}
              location={expense.location}
-             id={expense.id}
+             key={expense.id}
              
             />
           ))}
