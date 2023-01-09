@@ -49,12 +49,12 @@ const App=()=> {
   
 
   return (
-    <div>
+    <Card className="expenses">
      <NewExpense ongettingdata={getingdatafromnew}/>
       <Card className="expenses">
       <Expense item={expensedata}/>
       </Card>
-    </div>
+    </Card>
   );
 }
 
