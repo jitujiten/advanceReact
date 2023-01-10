@@ -53,9 +53,9 @@ const [dateentervalue,datechangevalue]=useState("");
         date:new Date(dateentervalue)
     };  
     props.onSaveExpenseData(alldata);
-    titlechangevalue("");
-    amountchangevalue("");
-    datechangevalue("");
+    // titlechangevalue("");
+    // amountchangevalue("");
+    // datechangevalue("");
   }
 
 
@@ -85,6 +85,7 @@ const [dateentervalue,datechangevalue]=useState("");
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.deletingform}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
